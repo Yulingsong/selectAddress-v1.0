@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,minimum-scale=1, maximum-scale=1"/>
+    <link rel="stylesheet" href="address.css">
+    <script src="jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<div class="but" onclick="show()">点击选择地址</div>
+
+<div class="product_details_address">
+    <div class="choose_address jdshop_alignment_center">
+        <div class="details_address">
+            <div><span>送至</span>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAMAAAApB0NrAAABj1BMVEUAAAD////mABKcAQ3mABLDABDFABDmABK+AQ++ARDmABLCABDmABLNABDCABDmABK+AQ/mABK8AQ++AQ/mABLMABC/ARDmABK8AQ/mABLiABK+AQ/mABK7AQ+6AQ/mABLmABK6AQ/mABK9AQ/mABK6AQ/XABHmABK6AQ++Dxy+EB2/FCHAFiPAFyTBABDCHyvDChnDIy/EJTHJOUTJOkXKPUfLP0nNRlDPTlfQVF3RV2DTX2fWABHXa3PZcnnad37cJDPcf4beho3fh47gi5LgjpXhj5bjABLkWGPlDyDlnqTmABLmARPmAhTmoafnparnpqvoEyToFiboGCjpGyvprLHprrPqJDPqKDfqKzrrMD/rMUDsUV3tRlPtR1TtvsLugYnuwsbvXWjvxMfwZnHwtLnxbnjxzM/xzdDyeoPy0NP0i5P0jpb0kpr1m6L3sbf3tLn34eP4vMH55+j56uv70tX78PH86uv87/D95uj96uv99/f9+fn+8vP+8/T++/v+/Pz+/f3/+/v//v7////fwfveAAAAKHRSTlMAAAIDCw0NDhERFRlCSEtdaXiFhYiQlKi0wMHJytLT5Obp6erq7vz8QGVO8AAAAbRJREFUOMuF1OVfAjEYB3BAFEUUURSxAIvZ3d0xsbvF7u6W+8Pdc8/dbQcov1e77ftZ3TaDMXYMRoMWk83p9vqp3+t22ky8WjAWh4fyeByWSGMvpPoU28OM2UUj4zKLxpqnVAdWNjeWJ1SUZ+XGrJC58xeJ5fl0RkVmzSgDBT8kJU/r6nCqseP3nsTzPaogOxoLrmj1RzDSa6+yOotsHPh1gx0cnYTkwkInVjvAmHDrluSWnRpC6g+hFKpC5DExY0N/AA23ZYSl8gHKHQSRjRknmjOoHyJyxqHcRxA5mXGjuYD6HjT9UB4kiNzMeNEcQ/0imi0odxFEXmb8aNbkibZAQ5s8/TqCyM+M+nPuoeFtoKl5+EteIXbJEO+HBiVdWhVDSvl8aOBeJLsqIUV8XZRuiqZBM7l8f1guOZnUCMni+8wy/66SuwpuUvn/0p2Odk58ccJ/Z5m4QjLFCckQzw9k9hHIdTknJYm6cwjZYIfns1HoJi3sPEO2JalbINkR9wJ2cn9aIPkJUe4XpWO1nBQk/3FPR6q1geLD73txGCpJ++/dAORLT4rytgjvT05miv79iZ1ftLMHLKmtwx4AAAAASUVORK5CYII=">
+                <span id="product_address_show" style="max-width: 250px">北京市,北京市,昌平区,城北街道</span></div>
+        </div>
+        <div class="details_stock">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAMAAACfWMssAAABMlBMVEX///+KioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKiopnwFdMAAAAZXRSTlMAAQIDBAYHCgsMDg8UFRYYGhweJCYpLS4wMzc9QUJHSElLTlBUWltgZmhpcHF1d3t9gIGEhoiJi42TlpeZn6Gkpqesra6ytLm+v8THycvP0NLT1Nrc3+Pk5+jr7fDx8vP19vr9/vBx0x4AAAENSURBVBgZ7cFVVkIBFAXQ80RERVCxsbC7uxPEQrFb4XnmPwXvHcLhy7V0b/z77QauGlGBqoVvXsagy9IcRyAbp1uHbpVuErLgkCbMQBY7p/nshCx5T/PQBFnbG02hDrKeMk0uAtkY3QZ0S3RTkAX7NOEgZDVnNF9dkDXc0jylIGt9pbmuh6y7THNSDdkI3TZ083QzkAW7dMOQRU9pSmnI+uhuoGp/oXnvgKjlmeYjDVHqkabUC1HzHU05A1GiSBMOQRQv0ISjENVe0E1AFMvTTUMUzdHNQRQ5oluBKNij24Qo2KLbCSBaozuIQLRIl41CNEuXj0I0SXcWg2qZ5iIO3XjIYgKV6C8k8e+P+AHSCVwAt/Q8GwAAAABJRU5ErkJggg==">
+        </div>
+    </div>
+</div>
+
+
+
+<div id="yls_address_choose" style="display: none">
+    <div class="yls_address_bg" onclick="hide()"></div>
+    <div class="yls_address_main">
+        <div class="yls_address_pop_top">
+            <div class="yls_address_pop_title">请选择地址</div>
+            <div class="yls_address_pop_cancel" onclick="hide()"></div>
+        </div>
+        <div class="yls_address_pop_main">
+            <div class="yls_address_product">
+                <div class="yls_address_select" id="yls_address_select">
+                    <div class="yls_address_top_address jdshop_alignment_middle">
+                        <div id="yls_top_address_1">请选择</div>
+                        <div id="yls_top_address_2"></div>
+                        <div id="yls_top_address_3"></div>
+                        <div id="yls_top_address_4"></div>
+                    </div>
+                    <div class="yls_address" id="yls_address_1"></div>
+                    <div class="yls_address" id="yls_address_2"></div>
+                    <div class="yls_address" id="yls_address_3"></div>
+                    <div class="yls_address" id="yls_address_4"></div>
+                    <div class="yls_address" id="yls_address_5"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+<style>
+
+
+</style>
+<script>
+
+
+    /*赋初始值*/
+    var startId = [1804,1805,1829,1831];
+    var startName = ['北京市','北京市','朝阳区','朝外街道'];
+
+    //最终值
+    var returnStartId = [];
+    var returnStartName = [];
+
+    /*显示地址选择，隐藏地址选择*/
+    function show() {
+        document.getElementById("yls_address_choose").style.display="";//显示
+        var url = '';//填写自己的请求url
+        var ids = startId;
+        var names = startName;
+        initAddress(url,ids,names)
+    }
+
+    /*隐藏地址选择*/
+    function hide() {
+        for(var i = 1;i < 5;i++){
+            var ad = 'yls_top_address_' + i;
+            var adid = 'yls_address_' + i;
+            $("#"+ad).removeClass('show');
+            $("#"+adid).removeClass('show');
+            $("#"+ad).show();
+            $("#"+adid).show();
+        }
+        document.getElementById("yls_address_choose").style.display="none";//显示
+    }
+
+    function initAddress(url,startId,startName) {
+        returnStartId = startId;
+        returnStartName = startName;
+        request(url,0,1);
+    }
+
+    function request(url,thisNum,addressNum){
+        var addressUrl = url+ thisNum;
+        $.ajax({
+            type: 'get',
+            url: addressUrl,
+            dataType: "json",
+            success: function (res) {
+                //无常规错误，根绝data数据做具体的业务判断显示
+                console.log(res.result);
+
+                setHtml(res.result,thisNum,addressNum);
+                if(addressNum < startId.length){
+                    request(url,startId[addressNum-1],addressNum+1);
+                    addressNum += 1;
+                }
+            },
+            error: function erryFunction(err) {
+                //网络请求错误
+                console.log(err);
+                console.log('读取失败')
+            }
+        });
+    }
+
+    function setHtml(data,thisNum,addressNum) {
+        console.log('----------------'+addressNum);
+        var addressId = 'yls_address_' + addressNum;
+        var topAddress = 'yls_top_address_' + addressNum;
+        if(addressNum == startId.length){
+            $("#"+addressId).addClass('show');
+            $("#"+topAddress).addClass('show');
+        }
+        $("#"+topAddress).text(startName[addressNum-1]);
+
+        document.getElementById(topAddress).addEventListener("click",function () {
+            var a = parseInt(topAddress.substr(topAddress.length-1,1));
+            console.log(a);
+            for(var i = 1;i < 5;i++){
+                var ad = 'yls_top_address_' + i;
+                var adid = 'yls_address_' + i;
+                if(i != a){
+                    $("#"+ad).removeClass('show');
+                    $("#"+adid).removeClass('show');
+                    if(i > a){
+                        $("#"+ad).hide();
+                    }
+                }else{
+                    $("#"+ad).addClass('show');
+                    $("#"+adid).addClass('show');
+                }
+            }
+
+            returnStartId = returnStartId.slice(0,addressNum);
+            returnStartName = returnStartName.slice(0,addressNum);
+            // console.log(returnStartId);
+            // console.log(returnStartName);
+            console.log(addressNum);
+
+        },false);
+        $("#"+addressId).empty();
+        var html = '';
+        if(data){
+            for(var i = 0;i < data.length;i++){
+                if(startName[addressNum-1] == data[i].name){//\''+ data[i].name  +'\'
+                    html += '<p class="p_show" id="add_'+data[i].areaId+'" onclick="chooseDetail('+data[i].areaId+','+addressNum+',&quot;'+data[i].name+'&quot;)">'+data[i].name+'</p>';
+                }else{
+                    html += '<p id="add_'+data[i].areaId+'" onclick="chooseDetail('+data[i].areaId+','+addressNum+',&quot;'+data[i].name+'&quot;)">'+data[i].name+'</p>';
+                }
+            }
+        }
+        $("#"+addressId).append(html);
+    }
+
+    function chooseDetail(areaId,addressNum,name) {
+        var url = '';//填写自己的请求url
+        var adid = 'add_'+areaId;
+        var adid1 = 'yls_address_' + addressNum;
+        $("#"+adid1+'>p').removeClass('p_show');
+        $("#"+adid).addClass('p_show');
+
+
+        returnStartId[addressNum-1] = areaId;
+        returnStartName[addressNum-1] = name;
+
+        // console.log(returnStartId);
+        // console.log(returnStartName);
+        if(addressNum == 4){
+            var topAddress1 = 'yls_top_address_' + addressNum;
+            $("#"+topAddress1).text(name);
+            $("#product_address_show").text(returnStartName);
+
+            hide();
+        }else{
+            newrequest(url,areaId,addressNum,name);
+        }
+    }
+
+    function newrequest(url,thisNum,addressNum,name){
+        var addressUrl = url+ thisNum;
+        console.log(name);
+        $.ajax({
+            type: 'get',
+            url: addressUrl,
+            dataType: "json",
+            success: function (res) {
+                //无常规错误，根绝data数据做具体的业务判断显示
+                console.log(res.result);
+
+                setHtml2(res.result,thisNum,addressNum,name);
+
+            },
+            error: function erryFunction(err) {
+                //网络请求错误
+                console.log(err);
+                console.log('读取失败')
+            }
+        });
+
+    }
+
+    function setHtml2(data,thisNum,addressNum,name) {
+        var adid1 = 'yls_address_' + addressNum;
+        var adid2 = 'yls_address_' + (addressNum+1);
+        var topAddress1 = 'yls_top_address_' + addressNum;
+        var topAddress2 = 'yls_top_address_' + (addressNum+1);
+
+        $("#"+topAddress2).empty();
+        $("#"+adid2).empty();
+        $("#"+topAddress2).addClass('show');
+        $("#"+topAddress2).show();
+        $("#"+topAddress1).removeClass('show');
+        $("#"+adid2).addClass('show');
+        $("#"+adid1).removeClass('show');
+        $("#"+topAddress2).text('请选择');
+        $("#"+topAddress1).text(name);
+        var html = '';
+        if(data){
+            for(var i = 0;i < data.length;i++){
+                html += '<p id="add_'+data[i].areaId+'" onclick="chooseDetail('+data[i].areaId+','+(addressNum+1)+',&quot;'+data[i].name+'&quot;)">'+data[i].name+'</p>';
+            }
+        }
+        $("#"+adid2).append(html);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
