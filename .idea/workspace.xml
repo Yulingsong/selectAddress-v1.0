@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="096e06b8-11f1-4550-8705-8e907a843e93" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/address.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chooseAddress.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jquery-3.2.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/address.css" beforeDir="false" afterPath="$PROJECT_DIR$/address.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chooseAddress.html" beforeDir="false" afterPath="$PROJECT_DIR$/chooseAddress.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,25 +16,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chooseAddress.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            <state relative-caret-position="230">
+              <caret line="73" column="33" lean-forward="true" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
+              <folding>
+                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/address.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="771">
-              <caret line="143" lean-forward="true" selection-start-line="143" selection-end-line="257" selection-end-column="1" />
+            <state relative-caret-position="250">
+              <caret line="57" column="32" lean-forward="true" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>http://39.106.31.8:3560/mall-service-user/v2/address/areas?areaId=</find>
+      <find>jdshop_alignment_middle</find>
+      <find>product_address_show</find>
+      <find>but</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,8 +53,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/chooseAddress.html" />
         <option value="$PROJECT_DIR$/address.css" />
+        <option value="$PROJECT_DIR$/chooseAddress.html" />
       </list>
     </option>
   </component>
@@ -54,8 +63,8 @@
     <config-path />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1895" />
-    <option name="y" value="-134" />
+    <option name="x" value="1892" />
+    <option name="y" value="-135" />
     <option name="width" value="1243" />
     <option name="height" value="966" />
   </component>
@@ -120,15 +129,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1545640666859</updated>
-      <workItem from="1545640668649" duration="451000" />
+      <workItem from="1545640668649" duration="3013000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="451000" />
+    <option name="totallyTimeSpent" value="3013000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1895" y="-134" width="1243" height="966" extended-state="0" />
+    <frame x="1892" y="-135" width="1243" height="966" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24959083" />
@@ -156,17 +166,20 @@
     <entry file="file://$PROJECT_DIR$/jquery-3.2.1.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/chooseAddress.html">
+    <entry file="file://$PROJECT_DIR$/address.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        <state relative-caret-position="250">
+          <caret line="57" column="32" lean-forward="true" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/address.css">
+    <entry file="file://$PROJECT_DIR$/chooseAddress.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="771">
-          <caret line="143" lean-forward="true" selection-start-line="143" selection-end-line="257" selection-end-column="1" />
+        <state relative-caret-position="230">
+          <caret line="73" column="33" lean-forward="true" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

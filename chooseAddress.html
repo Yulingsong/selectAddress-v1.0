@@ -8,20 +8,10 @@
     <script src="jquery-3.2.1.min.js"></script>
 </head>
 <body>
-<div class="but" onclick="show()">点击选择地址</div>
+<div class="btn" onclick="show()">点击选择地址</div>
 
-<div class="product_details_address">
-    <div class="choose_address jdshop_alignment_center">
-        <div class="details_address">
-            <div><span>送至</span>
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAMAAAApB0NrAAABj1BMVEUAAAD////mABKcAQ3mABLDABDFABDmABK+AQ++ARDmABLCABDmABLNABDCABDmABK+AQ/mABK8AQ++AQ/mABLMABC/ARDmABK8AQ/mABLiABK+AQ/mABK7AQ+6AQ/mABLmABK6AQ/mABK9AQ/mABK6AQ/XABHmABK6AQ++Dxy+EB2/FCHAFiPAFyTBABDCHyvDChnDIy/EJTHJOUTJOkXKPUfLP0nNRlDPTlfQVF3RV2DTX2fWABHXa3PZcnnad37cJDPcf4beho3fh47gi5LgjpXhj5bjABLkWGPlDyDlnqTmABLmARPmAhTmoafnparnpqvoEyToFiboGCjpGyvprLHprrPqJDPqKDfqKzrrMD/rMUDsUV3tRlPtR1TtvsLugYnuwsbvXWjvxMfwZnHwtLnxbnjxzM/xzdDyeoPy0NP0i5P0jpb0kpr1m6L3sbf3tLn34eP4vMH55+j56uv70tX78PH86uv87/D95uj96uv99/f9+fn+8vP+8/T++/v+/Pz+/f3/+/v//v7////fwfveAAAAKHRSTlMAAAIDCw0NDhERFRlCSEtdaXiFhYiQlKi0wMHJytLT5Obp6erq7vz8QGVO8AAAAbRJREFUOMuF1OVfAjEYB3BAFEUUURSxAIvZ3d0xsbvF7u6W+8Pdc8/dbQcov1e77ftZ3TaDMXYMRoMWk83p9vqp3+t22ky8WjAWh4fyeByWSGMvpPoU28OM2UUj4zKLxpqnVAdWNjeWJ1SUZ+XGrJC58xeJ5fl0RkVmzSgDBT8kJU/r6nCqseP3nsTzPaogOxoLrmj1RzDSa6+yOotsHPh1gx0cnYTkwkInVjvAmHDrluSWnRpC6g+hFKpC5DExY0N/AA23ZYSl8gHKHQSRjRknmjOoHyJyxqHcRxA5mXGjuYD6HjT9UB4kiNzMeNEcQ/0imi0odxFEXmb8aNbkibZAQ5s8/TqCyM+M+nPuoeFtoKl5+EteIXbJEO+HBiVdWhVDSvl8aOBeJLsqIUV8XZRuiqZBM7l8f1guOZnUCMni+8wy/66SuwpuUvn/0p2Odk58ccJ/Z5m4QjLFCckQzw9k9hHIdTknJYm6cwjZYIfns1HoJi3sPEO2JalbINkR9wJ2cn9aIPkJUe4XpWO1nBQk/3FPR6q1geLD73txGCpJ++/dAORLT4rytgjvT05miv79iZ1ftLMHLKmtwx4AAAAASUVORK5CYII=">
-                <span id="product_address_show" style="max-width: 250px">北京市,北京市,昌平区,城北街道</span></div>
-        </div>
-        <div class="details_stock">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAMAAACfWMssAAABMlBMVEX///+KioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKiopnwFdMAAAAZXRSTlMAAQIDBAYHCgsMDg8UFRYYGhweJCYpLS4wMzc9QUJHSElLTlBUWltgZmhpcHF1d3t9gIGEhoiJi42TlpeZn6Gkpqesra6ytLm+v8THycvP0NLT1Nrc3+Pk5+jr7fDx8vP19vr9/vBx0x4AAAENSURBVBgZ7cFVVkIBFAXQ80RERVCxsbC7uxPEQrFb4XnmPwXvHcLhy7V0b/z77QauGlGBqoVvXsagy9IcRyAbp1uHbpVuErLgkCbMQBY7p/nshCx5T/PQBFnbG02hDrKeMk0uAtkY3QZ0S3RTkAX7NOEgZDVnNF9dkDXc0jylIGt9pbmuh6y7THNSDdkI3TZ083QzkAW7dMOQRU9pSmnI+uhuoGp/oXnvgKjlmeYjDVHqkabUC1HzHU05A1GiSBMOQRQv0ISjENVe0E1AFMvTTUMUzdHNQRQ5oluBKNij24Qo2KLbCSBaozuIQLRIl41CNEuXj0I0SXcWg2qZ5iIO3XjIYgKV6C8k8e+P+AHSCVwAt/Q8GwAAAABJRU5ErkJggg==">
-        </div>
-    </div>
-</div>
+<div class="show_address" id="product_address_show" onclick="show()">北京市,北京市,朝阳区,朝外街道</div>
+
 
 
 
@@ -35,7 +25,7 @@
         <div class="yls_address_pop_main">
             <div class="yls_address_product">
                 <div class="yls_address_select" id="yls_address_select">
-                    <div class="yls_address_top_address jdshop_alignment_middle">
+                    <div class="yls_address_top_address alignment_middle">
                         <div id="yls_top_address_1">请选择</div>
                         <div id="yls_top_address_2"></div>
                         <div id="yls_top_address_3"></div>
@@ -45,7 +35,7 @@
                     <div class="yls_address" id="yls_address_2"></div>
                     <div class="yls_address" id="yls_address_3"></div>
                     <div class="yls_address" id="yls_address_4"></div>
-                    <div class="yls_address" id="yls_address_5"></div>
+                    <!--<div class="yls_address" id="yls_address_5"></div>-->
                 </div>
             </div>
         </div>
@@ -72,7 +62,7 @@
     /*显示地址选择，隐藏地址选择*/
     function show() {
         document.getElementById("yls_address_choose").style.display="";//显示
-        var url = '';//填写自己的请求url
+        var url = 'http://******/address/areas?areaId=';
         var ids = startId;
         var names = startName;
         initAddress(url,ids,names)
@@ -80,6 +70,7 @@
 
     /*隐藏地址选择*/
     function hide() {
+        //点击隐藏的时候循环将列表所有的show样式去除，重新添加到最后一列上
         for(var i = 1;i < 5;i++){
             var ad = 'yls_top_address_' + i;
             var adid = 'yls_address_' + i;
@@ -89,14 +80,22 @@
             $("#"+adid).show();
         }
         document.getElementById("yls_address_choose").style.display="none";//显示
-    }
-
-    function initAddress(url,startId,startName) {
+        //点击隐藏了，就把最终值还原成初始值
         returnStartId = startId;
         returnStartName = startName;
+    }
+
+    //初始化方法
+    function initAddress(url,startId,startName) {
+        //将我们最后需要获取的值初始化成初始值
+        returnStartId = startId;
+        returnStartName = startName;
+        //初始化请求areaid=0的数据，我用的接口areaid=0的时候是请求省级地址
         request(url,0,1);
     }
 
+    //初始化请求数据部分，
+    //thisNum 为areaid变化数值 url是请求url, addressNum是每个address是第几个
     function request(url,thisNum,addressNum){
         var addressUrl = url+ thisNum;
         $.ajax({
@@ -106,8 +105,9 @@
             success: function (res) {
                 //无常规错误，根绝data数据做具体的业务判断显示
                 console.log(res.result);
-
+                //初始化的渲染html
                 setHtml(res.result,thisNum,addressNum);
+                //循环请求下级地址
                 if(addressNum < startId.length){
                     request(url,startId[addressNum-1],addressNum+1);
                     addressNum += 1;
@@ -121,8 +121,8 @@
         });
     }
 
+    //初始化渲染页面
     function setHtml(data,thisNum,addressNum) {
-        console.log('----------------'+addressNum);
         var addressId = 'yls_address_' + addressNum;
         var topAddress = 'yls_top_address_' + addressNum;
         if(addressNum == startId.length){
@@ -131,6 +131,7 @@
         }
         $("#"+topAddress).text(startName[addressNum-1]);
 
+        //初始化之后选中的地址顶部tab进行添加点击方法，每次点击会做什么事情
         document.getElementById(topAddress).addEventListener("click",function () {
             var a = parseInt(topAddress.substr(topAddress.length-1,1));
             console.log(a);
@@ -149,54 +150,56 @@
                 }
             }
 
+            //tab上选中地址点击的时候，最终选择地址数组数据也要相应的变化
             returnStartId = returnStartId.slice(0,addressNum);
             returnStartName = returnStartName.slice(0,addressNum);
-            // console.log(returnStartId);
-            // console.log(returnStartName);
-            console.log(addressNum);
 
         },false);
-        $("#"+addressId).empty();
+        $("#"+addressId).empty();//清空当前列表的html
         var html = '';
+        //拼接html，为地址列表中每一个地址添加点击方法
         if(data){
             for(var i = 0;i < data.length;i++){
-                if(startName[addressNum-1] == data[i].name){//\''+ data[i].name  +'\'
+                if(startName[addressNum-1] == data[i].name){
                     html += '<p class="p_show" id="add_'+data[i].areaId+'" onclick="chooseDetail('+data[i].areaId+','+addressNum+',&quot;'+data[i].name+'&quot;)">'+data[i].name+'</p>';
                 }else{
                     html += '<p id="add_'+data[i].areaId+'" onclick="chooseDetail('+data[i].areaId+','+addressNum+',&quot;'+data[i].name+'&quot;)">'+data[i].name+'</p>';
                 }
             }
         }
+        //添加html到列表上渲染页面
         $("#"+addressId).append(html);
     }
 
+    //点击列表中详细地址的方法
     function chooseDetail(areaId,addressNum,name) {
-        var url = '';//填写自己的请求url
+        var url = 'http://******/address/areas?areaId=';
         var adid = 'add_'+areaId;
         var adid1 = 'yls_address_' + addressNum;
+        //选中的数据加上标红显示
         $("#"+adid1+'>p').removeClass('p_show');
         $("#"+adid).addClass('p_show');
 
-
+        //点击具体地址之后，将最终选择地址数组中相应位置的数据替换掉
         returnStartId[addressNum-1] = areaId;
         returnStartName[addressNum-1] = name;
 
-        // console.log(returnStartId);
-        // console.log(returnStartName);
+        //判断是否是第四级地址，如果是第四级地址，把获取到的数据渲染到页面上，并且隐藏弹框
+        //如果是第四级地址，发送请求获取下一级的数据进行渲染页面
         if(addressNum == 4){
             var topAddress1 = 'yls_top_address_' + addressNum;
             $("#"+topAddress1).text(name);
             $("#product_address_show").text(returnStartName);
-
             hide();
         }else{
             newrequest(url,areaId,addressNum,name);
         }
     }
 
+    //点击列表里具体地址，发送新的请求获取下一级数据
+    //thisNum 为areaid变化数值 url是请求url, addressNum是每个address是第几个，name是你选择的地址具体名称
     function newrequest(url,thisNum,addressNum,name){
         var addressUrl = url+ thisNum;
-        console.log(name);
         $.ajax({
             type: 'get',
             url: addressUrl,
@@ -204,9 +207,8 @@
             success: function (res) {
                 //无常规错误，根绝data数据做具体的业务判断显示
                 console.log(res.result);
-
+                //获取到数据之后渲染下一级列表
                 setHtml2(res.result,thisNum,addressNum,name);
-
             },
             error: function erryFunction(err) {
                 //网络请求错误
@@ -217,12 +219,15 @@
 
     }
 
+    //选择详细地址请求获取数据之后渲染方法
     function setHtml2(data,thisNum,addressNum,name) {
+        //获取到相应的div
         var adid1 = 'yls_address_' + addressNum;
         var adid2 = 'yls_address_' + (addressNum+1);
         var topAddress1 = 'yls_top_address_' + addressNum;
         var topAddress2 = 'yls_top_address_' + (addressNum+1);
 
+        //清空相应的下一级div和下一级tab上选中的地址，填入新的数据
         $("#"+topAddress2).empty();
         $("#"+adid2).empty();
         $("#"+topAddress2).addClass('show');
@@ -234,6 +239,7 @@
         $("#"+topAddress1).text(name);
         var html = '';
         if(data){
+            //拼接html，并且添加上新的详细地址选择方法
             for(var i = 0;i < data.length;i++){
                 html += '<p id="add_'+data[i].areaId+'" onclick="chooseDetail('+data[i].areaId+','+(addressNum+1)+',&quot;'+data[i].name+'&quot;)">'+data[i].name+'</p>';
             }
